@@ -1,7 +1,12 @@
+@use "./mixins";
+@use "./index.scss" as *;
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: $primary-color;
+    color: $secondary-color;
 }
 
 main {
@@ -11,4 +16,10 @@ main {
 section {
     max-width: 800px;
     margin: 50px auto;
+}
+
+.container {
+    @include mixins.flex-center;
+    height: 100vh;
+    background-color: #f4f4f4;
 }
